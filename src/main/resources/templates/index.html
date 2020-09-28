@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://thymleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Mars Rover API App</title>
@@ -7,6 +7,10 @@
 <body>
 
 <h2>Welcome to the Mars API Web Apps</h2>
+
+
+<img th:each="photo : ${roverData.photos}" th:src="${photo.imgSrc}">
+
 
 </body>
 </html>
